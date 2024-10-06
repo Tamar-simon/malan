@@ -1,32 +1,40 @@
-using Microsoft.EntityFrameworkCore;
-using ShoppingStore.Data; // הוספת ה-namespace של ה-DbContext שלך
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore; // If you're using EF Core
+using ShoppingStore.Data; // Adjust to your actual namespace
 
 var builder = WebApplication.CreateBuilder(args);
 
-// הוספת שירותי ה-DbContext
+// Add services to the container.
+builder.Services.AddControllers();
 builder.Services.AddDbContext<StoreContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddControllers(); // הוספת שירותי ה-Controllers
+// Configure CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("MyAllowSpecificOrigins",
+                      builder =>
+                      {
+                          builder.WithOrigins("http://localhost:3000") // Adjust as needed
+                                 .AllowAnyMethod()
+                                 .AllowAnyHeader();
+                      });
+});
 
 var app = builder.Build();
 
-// קביעת תצורות האפליקציה
+// Use CORS policy
+app.UseCors("MyAllowSpecificOrigins");
+
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
 }
-else
-{
-    app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
-}
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
-app.UseRouting();
 app.UseAuthorization();
-
-app.MapControllers(); // מפה את ה-Controllers
+app.MapControllers();
 
 app.Run();

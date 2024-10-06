@@ -1,26 +1,26 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "target": "ES6",                        // הגדר את היעד לגרסה של ECMAScript
+    "lib": ["DOM", "ES6"],                 // הגדר את הספריות שברצונך לכלול
+    "allowJs": true,                        // אפשר קוד JavaScript
+    "skipLibCheck": true,                  // החמצת בדיקות של קבצי ספריה
+    "strict": true,                         // הפעל בדיקות קפדניות
+    "forceConsistentCasingInFileNames": true, // כפייה על שמות קבצים באותיות גדולות וקטנות
+    "noEmit": true,                        // אל יפלט קבצים ל-Output
+    "esModuleInterop": true,                // אפשר Interoperability עם CommonJS
+    "module": "ESNext",                     // הגדר את סוג המודול
+    "moduleResolution": "node",             // הגדר את שיטת החיפוש של המודולים
+    "jsx": "react-jsx",                     // הגדר את סוג ה-JSX
+    "baseUrl": "./src",                     // הגדר את בסיס ה-URL
+    "paths": {
+      "@/*": ["*"]                         // הגדרות ל-Paths
+    }
   },
   "include": [
-    "src"
+    "src/**/*"                              // כלול את כל הקבצים בתיקיית src
+  ],
+  "exclude": [
+    "node_modules",                         // החמצ את תיקיית node_modules
+    "**/*.spec.ts"                          // החמצ קבצי בדיקות
   ]
 }
