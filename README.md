@@ -8,6 +8,12 @@
    dotnet build
    dotnet run
 
+2. **shopping-store-client - React app **:
+   ```bash
+   npm i 
+   npm start
+
+   
 
 ## Tech Stack
 - **Frontend**: React, Redux Toolkit, TypeScript
