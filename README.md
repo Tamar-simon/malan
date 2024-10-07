@@ -43,7 +43,7 @@ Branch master!
 - Create pipliene to deploy all app to AWS .
 - AWS API Gateway - all request come its, implement authentication and authorization for **secure**.
 - We need AWS Elastic Load Balancer to support big data, scaling
-- All the MS will be EC2
+- All microservices (MS) will run on **EC2** instances, providing flexible and customizable virtual servers for the application.
 - For React app we also use **CloudFront** for performance improvement.
  ## Database Setup
 The project utilizes **RDS** (Relational Database Service) for both MongoDB and MSSQL. This ensures scalable and managed database solutions, leveraging the benefits of cloud infrastructure.
