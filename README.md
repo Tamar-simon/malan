@@ -37,7 +37,17 @@ Branch master!
 - **Database**: MongoDB,Entity Framework
 
  ## TODO
-- add loggers in error case for deployment we can monitor it with Cloud watch (AWS).
+- add loggers in error case for deployment we can monitor it with **Cloud watch (AWS)**.
+- use enviromet varibale for dbName . 
+- configuration .
+
+- ## For Deployment
+- we have to create pipliene to deploy all app to AWS .
+- Create new MS - API Gateway - all request come its.
+- API Gateway also authentication and authorization for **secure**.
+
+- ודs
+- ק
 
 
 
