@@ -46,7 +46,8 @@ Branch master!
 - All microservices (MS) will run on **EC2** instances, providing flexible and customizable virtual servers for the application.
 - For React app we also use **CloudFront** for performance improvement.
  ## Database Setup
-The project utilizes **RDS** (Relational Database Service) for both MongoDB and MSSQL. This ensures scalable and managed database solutions, leveraging the benefits of cloud infrastructure.
+The project utilizes **RDS** (Relational Database Service) for  MSSQL. This ensures scalable and managed database solutions, leveraging the benefits of cloud infrastructure.
+Mongodb will run on EC2
 
  ## TODO
 - Add loggers in error case for deployment we can monitor it with **Cloud watch (AWS)**.
