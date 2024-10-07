@@ -9,20 +9,19 @@
    dotnet build
    dotnet run
 
-2. **ShoppingStore - dotnet core project **:
-   
-   ```bash
-   dotnet restore
-   dotnet build
-   dotnet run
-
-3. **shopping-store-server-node - Node.js + TS + express
+2. **shopping-store-server-node - Node.js + TS + express
    
    ```bash
    npm i 
    npm start
 
+3. **shopping-store-client - React + TS 
+   
+   ```bash
+   npm i 
+   npm start
 4.Mongo db - locally
+4.SQL - locally
 
    
 
