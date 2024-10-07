@@ -1,15 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import storeReducer from './storeSlice'; // ייבא את ה-reducer של המוצרים
+import storeReducer from './storeSlice';
 
-// הגדרת ה-store
-const store = configureStore({
+export const store = configureStore({
     reducer: {
-        store: storeReducer, // רדוסר המוצרים תחת המפתח 'store'
+        store: storeReducer,
     },
 });
 
-// הגדרת RootState - סוג ה-state הגלובלי שלך
+// Define RootState type
 export type RootState = ReturnType<typeof store.getState>;
-
-// ייצוא של store כדי להשתמש בכול האפליקציה
-export default store;

@@ -1,53 +1,52 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addProduct } from '../store/storeSlice'; // הוספת מוצר ל-Redux
+import { addProduct } from '../store/storeSlice'; // ייבוא הפעולה להוספת מוצר מה-slice
 
 interface AddProductProps {
-    categories: { id: string, name: string }[]; // הגדרת סוג הנתונים עבור הקטגוריות
+  categories: { id: string; name: string }[]; // הגדרה של פרופס קטגוריות
 }
 
 const AddProduct: React.FC<AddProductProps> = ({ categories }) => {
-    const dispatch = useDispatch();
-    const [productName, setProductName] = useState<string>(''); // state עבור שם המוצר
-    const [selectedCategory, setSelectedCategory] = useState<string>(''); // state עבור קטגוריה
+  const dispatch = useDispatch();
+  const [productName, setProductName] = useState<string>(''); // שם המוצר
+  const [selectedCategory, setSelectedCategory] = useState<string>(''); // קטגוריה שנבחרה
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
 
-        if (productName && selectedCategory) {
-            // שליחת פעולה ל-Redux להוספת המוצר
-            dispatch(addProduct({ id: Date.now().toString(), name: productName, category: selectedCategory }));
-            setProductName(''); // איפוס שם המוצר
-            setSelectedCategory(''); // איפוס הקטגוריה
-        } else {
-            alert("Please fill in all fields!");
-        }
-    };
+    if (productName && selectedCategory) {
+      dispatch(addProduct({ id: Date.now().toString(), name: productName, category: selectedCategory }));
+      setProductName('');
+      setSelectedCategory('');
+    } else {
+      alert('אנא מלא את כל השדות!');
+    }
+  };
 
-    return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                value={productName}
-                onChange={(e) => setProductName(e.target.value)}
-                placeholder="Product Name"
-                required
-            />
-            <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                required
-            >
-                <option value="">Select a category</option>
-                {categories.map(category => (
-                    <option key={category.id} value={category.id}>
-                        {category.name}
-                    </option>
-                ))}
-            </select>
-            <button type="submit">Add Product</button>
-        </form>
-    );
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={productName}
+        onChange={(e) => setProductName(e.target.value)}
+        placeholder="שם המוצר"
+        required
+      />
+      <select
+        value={selectedCategory}
+        onChange={(e) => setSelectedCategory(e.target.value)}
+        required
+      >
+        <option value="">בחר קטגוריה</option>
+        {categories.map((category) => (
+          <option key={category.id} value={category.name}>
+            {category.name}
+          </option>
+        ))}
+      </select>
+      <button type="submit">הוסף מוצר</button>
+    </form>
+  );
 };
 
 export default AddProduct;
