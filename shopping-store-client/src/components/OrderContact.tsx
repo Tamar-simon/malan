@@ -80,13 +80,13 @@ const OrderContact: React.FC = () => {
 
     return (
         <div style={{ textAlign: 'center' }}>
-            <h1>Order Summary</h1>
+            <h1>סיכום הזמנה</h1>
             <ProductList />
             <form onSubmit={handleSubmit} style={{ marginTop: '20px' }}>
                 <div>
                     <input
                         type="text"
-                        placeholder="First Name"
+                        placeholder="שם פרטי"
                         value={firstName}
                         onChange={(e) => setFirstName(e.target.value)}
                         required
@@ -96,7 +96,7 @@ const OrderContact: React.FC = () => {
                 <div>
                     <input
                         type="text"
-                        placeholder="Last Name"
+                        placeholder="שם משפחה"
                         value={lastName}
                         onChange={(e) => setLastName(e.target.value)}
                         required
@@ -106,7 +106,7 @@ const OrderContact: React.FC = () => {
                 <div>
                     <input
                         type="email"
-                        placeholder="Email"
+                        placeholder="אימייל"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
@@ -116,14 +116,14 @@ const OrderContact: React.FC = () => {
                 <div>
                     <input
                         type="text"
-                        placeholder="Address"
+                        placeholder="כתובת"
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
                         required
                     />
                     {errors.address && <span style={{ color: 'red' }}>{errors.address}</span>}
                 </div>
-                <button type="submit">Submit Order</button>
+                <button type="submit">אשר הזמנה</button>
             </form>
         </div>
     );

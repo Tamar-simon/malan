@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "Data\\StoreContext.cs",
               "ToolTip": "C:\\malan\\ShoppingStore\\Data\\StoreContext.cs",
               "RelativeToolTip": "Data\\StoreContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-07T11:59:49.582Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "Controllers\\CategoriesController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T17:01:07.584Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-06T17:01:07.584Z"
             },
             {
               "$type": "Document",
@@ -84,8 +83,7 @@
               "RelativeToolTip": "Models\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T15:45:30.406Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-06T15:45:30.406Z"
             },
             {
               "$type": "Document",

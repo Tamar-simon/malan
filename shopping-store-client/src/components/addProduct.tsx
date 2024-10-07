@@ -28,7 +28,7 @@ const AddProduct: React.FC<AddProductProps> = ({ categories }) => {
                 type="text" 
                 value={productName} 
                 onChange={(e) => setProductName(e.target.value)} 
-                placeholder="Product Name" 
+                placeholder="שם מוצר" 
                 required 
             />
             <select 
@@ -36,12 +36,12 @@ const AddProduct: React.FC<AddProductProps> = ({ categories }) => {
                 onChange={(e) => setSelectedCategory(e.target.value)} 
                 required
             >
-                <option value="">Choose a category</option>
+                <option value="">בחר קטגוריה</option>
                 {categories.map((category) => (
                     <option key={category.id} value={category.name}>{category.name}</option>
                 ))}
             </select>
-            <button type="submit">Add Product</button>
+            <button type="submit">הוסף</button>
         </form>
     );
 };
