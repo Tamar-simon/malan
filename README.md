@@ -33,9 +33,9 @@ Branch master!
 
    
 - shopping-store-client - http://localhost:3000/
-- the client send Http request to Api categories (dotnet) - > MSSQL 
-- user select category - we save the details with Redux .  
-- the next page we display the proucts and send Http request to Node.js server to save the orders in Mongodb.
+- The client send Http request to Api categories (dotnet) - > MSSQL 
+- User select category - we save the details with Redux .  
+- The next page we display the proucts and send Http request to Node.js server to save the orders in Mongodb.
 
 
  ## TODO
@@ -43,9 +43,10 @@ Branch master!
 - use enviromet varibale for dbName . 
 - configuration .
 - add test as part of CICD proccess.
+- add notfication banner on succsess or error state.
 
  ## For Deployment
-- we have to create pipliene to deploy all app to AWS .
+- Create pipliene to deploy all app to AWS .
 - AWS API Gateway - all request come its.API Gateway also implement authentication and authorization for **secure**.
 - we need AWS Elastic Load Balancer to support big data, scaling
 - all the MS will be EC2
