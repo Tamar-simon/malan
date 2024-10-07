@@ -41,7 +41,7 @@ Branch master!
 - use enviromet varibale for dbName . 
 - configuration .
 
-- ## For Deployment
+ ## For Deployment
 - we have to create pipliene to deploy all app to AWS .
 - Create new MS - API Gateway - all request come its.
 - API Gateway also authentication and authorization for **secure**.
