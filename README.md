@@ -47,6 +47,7 @@ Branch master!
 - For React app we also use **CloudFront** for performance improvement.
  ## Database Setup
 The project utilizes **RDS** (Relational Database Service) for  MSSQL. This ensures scalable and managed database solutions, leveraging the benefits of cloud infrastructure.
+
 Mongodb will run on EC2
 
  ## TODO
