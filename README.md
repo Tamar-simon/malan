@@ -40,18 +40,15 @@ Branch master!
 - add loggers in error case for deployment we can monitor it with **Cloud watch (AWS)**.
 - use enviromet varibale for dbName . 
 - configuration .
+- add test as part of CICD proccess.
 
  ## For Deployment
 - we have to create pipliene to deploy all app to AWS .
 - AWS API Gateway - all request come its.
-- API Gateway also implemnt authentication and authorization for **secure**.
+- API Gateway also implement authentication and authorization for **secure**.
 - we need AWS Elastic Load Balancer to support big data, scaling
 - all the MS will be EC2
-- כםר Rק
-- כ
-כ
-- ודs
-- ק
+- for React app we also use **CloudFront** for performance improvement.
 
 
 
