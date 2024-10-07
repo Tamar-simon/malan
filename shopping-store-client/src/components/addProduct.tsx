@@ -1,67 +1,48 @@
-import React, { useState, useEffect } from 'react'; // Import React and hooks
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addProduct } from '../store/storeSlice'; // Update the import path as needed
+import { addProduct } from '../store/storeSlice'; // הוספת מוצר ל-Redux
 
-interface Category {
-    id: string; // Unique identifier for each category
-    name: string; // Name of the category
+interface AddProductProps {
+    categories: { id: string, name: string }[]; // הגדרת סוג הנתונים עבור הקטגוריות
 }
 
-const AddProduct: React.FC = () => {
+const AddProduct: React.FC<AddProductProps> = ({ categories }) => {
     const dispatch = useDispatch();
-    const [productName, setProductName] = useState<string>(''); // State for product name
-    const [selectedCategory, setSelectedCategory] = useState<string>(''); // State for selected category
-    const [categories, setCategories] = useState<Category[]>([]); // State for categories
+    const [productName, setProductName] = useState<string>(''); // state עבור שם המוצר
+    const [selectedCategory, setSelectedCategory] = useState<string>(''); // state עבור קטגוריה
 
-    // Fetch categories from API
-    useEffect(() => {
-        const fetchCategories = async () => {
-            try {
-                const response = await fetch('http://localhost:5000/api/categories'); // Adjust the API endpoint as needed
-                if (!response.ok) {
-                    throw new Error('Network response was not ok'); // Error handling
-                }
-                const data: Category[] = await response.json(); // Parse JSON data
-                setCategories(data); // Update categories state
-            } catch (error) {
-                console.error("Failed to fetch categories:", error); // Log errors to the console
-            }
-        };
-
-        fetchCategories(); // Call the fetch function
-    }, []);
-
-    // Handle form submission
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault(); // Prevent default form submission behavior
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
 
         if (productName && selectedCategory) {
-            // Dispatch action to add product with a unique ID
+            // שליחת פעולה ל-Redux להוספת המוצר
             dispatch(addProduct({ id: Date.now().toString(), name: productName, category: selectedCategory }));
-            setProductName(''); // Reset product name input
-            setSelectedCategory(''); // Reset selected category
+            setProductName(''); // איפוס שם המוצר
+            setSelectedCategory(''); // איפוס הקטגוריה
         } else {
-            alert("Please fill in all fields!"); // Alert user if fields are empty
+            alert("Please fill in all fields!");
         }
     };
 
     return (
-        <form onSubmit={handleSubmit}> {/* Correctly attach the handleSubmit function */}
-            <input 
-                type="text" 
-                value={productName} 
-                onChange={(e) => setProductName(e.target.value)} 
-                placeholder="Product Name" 
-                required // Make the input required
+        <form onSubmit={handleSubmit}>
+            <input
+                type="text"
+                value={productName}
+                onChange={(e) => setProductName(e.target.value)}
+                placeholder="Product Name"
+                required
             />
-            <select 
-                value={selectedCategory} 
-                onChange={(e) => setSelectedCategory(e.target.value)} 
-                required // Make the select required
+            <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                required
             >
                 <option value="">Select a category</option>
-                {categories.map((category) => (
-                    <option key={category.id} value={category.id}>{category.name}</option>
+                {categories.map(category => (
+                    <option key={category.id} value={category.id}>
+                        {category.name}
+                    </option>
                 ))}
             </select>
             <button type="submit">Add Product</button>
@@ -69,4 +50,4 @@ const AddProduct: React.FC = () => {
     );
 };
 
-export default AddProduct; // Export the component
+export default AddProduct;

@@ -1,19 +1,17 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { store } from './store/store'; // עדכן את הנתיב בהתאם
-import AddProduct from 'components/addProduct';
-import ProductList from 'components/productList';
+import { Routes, Route } from 'react-router-dom';
+import ProductWrapper from './components/ProductWrapper';
 
 const App: React.FC = () => {
-    return (
-        <Provider store={store}>
-            <div>
-                <h1>Shopping List</h1>
-                <AddProduct />
-                <ProductList />
-            </div>
-        </Provider>
-    );
+  return (
+    <div>
+      <Routes>
+        <Route path="/" element={<ProductWrapper />} />
+        <Route path="/shopping-list" element={<ProductWrapper />} />
+        {/* <Route path="/order-summary" element={<OrderSummary />} /> */}
+      </Routes>
+    </div>
+  );
 };
 
 export default App;

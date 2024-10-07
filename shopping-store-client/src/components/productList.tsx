@@ -1,20 +1,25 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { RootState } from '../store/store'; // עדכן את הנתיב בהתאם
 
-const ProductList: React.FC = () => {
-    const products = useSelector((state: RootState) => state.store.products); // שליפת מוצרים מתוך ה-state
+interface ProductListProps {
+    products: { id: string, name: string, category: string }[]; // הגדרת סוג המוצרים
+}
 
+const ProductList: React.FC<ProductListProps> = ({ products }) => {
     return (
         <div>
+            <h5>{ JSON.stringify(products)}</h5>
             <h2>Product List</h2>
-            <ul>
-                {products.map((product) => (
-                    <li key={product.id}>
-                        {product.name} - {product.category}
-                    </li>
-                ))}
-            </ul>
+            {products.length > 0 ? (
+                <ul>
+                    {products.map(product => (
+                        <li key={product.id}>
+                            {product.name} - {product.category}
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <p>No products available.</p>
+            )}
         </div>
     );
 };
