@@ -1,5 +1,11 @@
 Branch master!
 
+## Tech Stack
+- **Frontend**: React, Redux Toolkit, TypeScript
+- **Backend**: Node.js, Express, TypeScript, Dotnet 8
+- **Database**: MongoDB,Entity Framework
+
+
 ## Installation and Setup
    
 1. **ShoppingStore - dotnet core project**:
@@ -31,10 +37,6 @@ Branch master!
 - user select category - we save the details with Redux .  
 - the next page we display the proucts and send Http request to Node.js server to save the orders in Mongodb.
 
-## Tech Stack
-- **Frontend**: React, Redux Toolkit, TypeScript
-- **Backend**: Node.js, Express, TypeScript, Dotnet 8
-- **Database**: MongoDB,Entity Framework
 
  ## TODO
 - add loggers in error case for deployment we can monitor it with **Cloud watch (AWS)**.
