@@ -50,7 +50,9 @@ Branch master!
 - we need AWS Elastic Load Balancer to support big data, scaling
 - all the MS will be EC2
 - for React app we also use **CloudFront** for performance improvement.
-- The Mongo and MsSql wil be as **RDS**
+ ## Database Setup
+The project utilizes **RDS** (Relational Database Service) for both MongoDB and MSSQL. This ensures scalable and managed database solutions, leveraging the benefits of cloud infrastructure.
+
 
 
 
