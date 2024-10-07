@@ -1,10 +1,10 @@
 
 
 ## Installation and Setup
- ### ShoppingStore - dotnet core project 
-   # dotnet restore
-   # dotnet build
-   # dotnet run
+ # ShoppingStore - dotnet core project 
+   ## dotnet restore
+   ## dotnet build
+   ## dotnet run
 
 ## Tech Stack
 - **Frontend**: React, Redux Toolkit, TypeScript
