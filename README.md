@@ -43,9 +43,13 @@ Branch master!
 
  ## For Deployment
 - we have to create pipliene to deploy all app to AWS .
-- Create new MS - API Gateway - all request come its.
-- API Gateway also authentication and authorization for **secure**.
-
+- AWS API Gateway - all request come its.
+- API Gateway also implemnt authentication and authorization for **secure**.
+- we need AWS Elastic Load Balancer to support big data, scaling
+- all the MS will be EC2
+- כםר Rק
+- כ
+כ
 - ודs
 - ק
 
