@@ -26,10 +26,10 @@ Branch master!
 5.SQL - locally
 
    
-shopping-store-client - http://localhost:3000/
-the client send Http request to Api categories (dotnet) - > MSSQL 
-user select category - we save the details with Redux . 
-the next page we display the proucts and send Http request to Node.js server to save the orders in Mongodb.
+- shopping-store-client - http://localhost:3000/
+- the client send Http request to Api categories (dotnet) - > MSSQL 
+- user select category - we save the details with Redux .  
+- the next page we display the proucts and send Http request to Node.js server to save the orders in Mongodb.
 
 ## Tech Stack
 - **Frontend**: React, Redux Toolkit, TypeScript
