@@ -20,8 +20,10 @@
    ```bash
    npm i 
    npm start
+   
 4.Mongo db - locally
-4.SQL - locally
+
+5.SQL - locally
 
    
 
