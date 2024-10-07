@@ -46,8 +46,7 @@ Branch master!
 
  ## For Deployment
 - we have to create pipliene to deploy all app to AWS .
-- AWS API Gateway - all request come its.
-- API Gateway also implement authentication and authorization for **secure**.
+- AWS API Gateway - all request come its.API Gateway also implement authentication and authorization for **secure**.
 - we need AWS Elastic Load Balancer to support big data, scaling
 - all the MS will be EC2
 - for React app we also use **CloudFront** for performance improvement.
