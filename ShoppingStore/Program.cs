@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.EntityFrameworkCore; // If you're using EF Core
-using ShoppingStore.Data; // Adjust to your actual namespace
+using Microsoft.EntityFrameworkCore;
+using ShoppingStore.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,13 +11,12 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<StoreContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Configure CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("MyAllowSpecificOrigins",
                       builder =>
                       {
-                          builder.WithOrigins("http://localhost:3000") // Adjust as needed
+                          builder.WithOrigins("http://localhost:3000")
                                  .AllowAnyMethod()
                                  .AllowAnyHeader();
                       });

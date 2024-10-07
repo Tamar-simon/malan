@@ -14,7 +14,6 @@ namespace ShoppingStore.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // נתוני קטגוריות ראשוניים
             modelBuilder.Entity<Category>().HasData(
                 new Category { CategoryId = 1, Name = "מוצרי חלב" },
                 new Category { CategoryId = 2, Name = "ירקות ופירות" }

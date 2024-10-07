@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ShoppingStore.Data;  // ייבוא של DbContext שלך
-using ShoppingStore.Models;  // ייבוא של המודל Category
+using ShoppingStore.Data; 
+using ShoppingStore.Models; 
 using Microsoft.EntityFrameworkCore;
 
 namespace Controllers
@@ -19,7 +19,6 @@ namespace Controllers
             _context = context;
         }
 
-        // פעולה לדוגמה לקבלת כל הקטגוריות
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Category>>> GetCategories()
         {
