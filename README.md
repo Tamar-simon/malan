@@ -2,9 +2,10 @@
 
 ## Installation and Setup
  ### ShoppingStore - dotnet core project 
-   ### dotnet restore
-   ### dotnet build
-   ### dotnet run
+   
+1. **Restore dependencies**:
+   ```bash
+   dotnet restore
 
 ## Tech Stack
 - **Frontend**: React, Redux Toolkit, TypeScript
