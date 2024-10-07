@@ -2,20 +2,20 @@ Branch master!
 
 ## Installation and Setup
    
-1. **ShoppingStore - dotnet core project **:
+1. **ShoppingStore - dotnet core project**:
    
    ```bash
    dotnet restore
    dotnet build
    dotnet run
 
-2. **shopping-store-server-node - Node.js + TS + express
+2. **shopping-store-server-node - Node.js + TS + express**:
    
    ```bash
    npm i 
    npm start
 
-3. **shopping-store-client - React + TS 
+3. **shopping-store-client - React + TS**:
    
    ```bash
    npm i 
